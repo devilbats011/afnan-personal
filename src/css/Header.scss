@@ -1,0 +1,151 @@
+@import "./Library.scss";
+@media (min-width: 0) {
+  
+  // @media (min-width: 0)
+  .sidebar-overlay {
+    position: fixed;
+    z-index: $z-10;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 80%;
+  }
+  
+  @function calcPos($m1, $m2) {
+    $res: $m1 + $m2;
+    @return $res;
+  }
+
+  $opacity: 0.8;
+  $mbtn: 2rem;
+  $mSide: calcPos($mbtn, 5rem);
+  .sidebar-btn
+  {
+    position: fixed;
+    z-index: $z-25;
+    border: 2px solid #0abce9;
+    background-color:transparent;//#0098be;// #05999F;//#2A898D;
+    color: #fff;
+    letter-spacing: 3px;
+    margin: $mbtn 0rem;
+    left:.5rem;
+    top:-18px;
+    border-radius: 100px;
+    padding:.7rem;
+    // padding-left: 1.5rem;
+    width: 80px;
+    height: 60px;
+    font-size: $b1;
+    cursor: pointer;
+    &:hover {
+      background-color:#0098be;
+      // box-shadow: 0px 0px 2px 1px #00beee;
+      opacity: $opacity;
+    }
+  }
+
+  .sidebar {
+    opacity: $opacity;
+    border-radius: 2px;
+    position: fixed;
+    top:-4px;
+    left:-130px;
+    // left: 3px;
+    font-size: $b1;
+    z-index: $z-25;
+   
+    // border: 1px solid #0098be;
+
+    color: #ffffff;
+    letter-spacing: 3px;
+    margin: $mSide 0rem;
+    padding:auto 3rem;
+    width: 120px;
+
+    &--show {
+      left:0px;
+    }
+
+    &__item {
+      position: relative;
+      left:-130px;
+      padding: 1rem;
+      text-align: center;
+      display: block;
+      border-bottom: 1px solid #ffffff ;
+      background-color: #0098be;//#2A898D;
+      // transition-duration: .8s;
+      cursor: pointer;
+
+      &--show {
+        left:0px;
+      }
+
+      
+    }
+    // &__item:last-child{
+    //   border-bottom: 0px solid #ddd;
+    //   // transition-duration: 2s;
+    //   // background-color: #000000;//#2A898D;
+    // }
+
+    $ends : 5;
+    $delay: .3s;
+ @for $i from 1 to $ends {
+      &__item:nth-child(#{$i}) {
+        $delay: $delay + .1s;
+        transition-duration: $delay;
+        // transition-delay: $delay;
+        
+        transition-timing-function: linear;
+
+      }
+  }
+    // &__item:first-child
+    // &__item:nth-child(3)
+    // {
+    // }
+  }
+
+  .header {
+    padding: $global-p;
+    margin: 1rem;
+  }
+
+  .navbar {
+    position: relative;
+    z-index: $z-5;
+    // border: 1px solid #1a1a1a;
+    text-align: right;
+    font-weight: $light;
+
+    // first and last child padding
+    $flp: 2.6rem;
+
+    &__item {
+      cursor: pointer;
+      position: relative;
+      padding:1rem 2rem;
+      display: inline-block;
+    }
+    &__item:first-child {
+      float: left;
+      font-family: Raleway;
+      font-weight: $regular;
+      text-align: center;
+      left: 3rem;
+
+      color: #000000;
+      padding-right: $flp;
+      display: flex;
+      direction: row;
+    }
+    // :nth-child(2)
+    &__item:last-child {
+      padding-right: $flp;
+    }
+  }
+}

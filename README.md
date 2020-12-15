@@ -1,3 +1,33 @@
+# VISUAL  STUDIO KEYBIND
+
+## QUICK --> CONSOLE.LOG
+alt+q console.log upward 
+alt+w console.log downward
+alt+e console.log normal
+---
+## QUICK DUPLICATE
+alt+1 downward copy
+alt+2 Down Arrow upward copy
+---
+## RENAME ALL INSTANCE
+selected the instance + F2
+f3 to rename instance using find/replace feature
+---
+## AUTO-FORMAT YOUR CODE
+Shift+f
+---
+## MOVE A LINE OR AN ENTIRE LINE 
+Alt+upward or Alt+downward
+----
+## SELECT MULTI-CURSORS
+ctrl+alt+ upward or downward
+----
+## SWITCH BETWEEN TABS
+ctrl+tab
+----
+## SEARCH ALL TYPE OF FILES
+ctrl+p
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts

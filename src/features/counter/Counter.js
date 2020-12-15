@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   decrement,
@@ -6,16 +6,39 @@ import {
   incrementByAmount,
   incrementAsync,
   selectCount,
+  mutateMultipler,
+  selectMutipleCount
 } from './counterSlice';
 import styles from './Counter.module.css';
 
 export function Counter() {
+
+  const ComponentName = 'Counter';
   const count = useSelector(selectCount);
+  const Mcount = useSelector(selectMutipleCount);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
+  const [multipler, setmultipler ] = useState(1);
+
+  useEffect(() => {
+    dispatch(mutateMultipler(Number(multipler) || 0))
+    console.log("run UseEffect "+ ComponentName )
+  },[dispatch, multipler]);
 
   return (
     <div>
+      <section className={styles.row}>
+        <p> <span>Sum Multipler </span> {Mcount}</p> &nbsp;&nbsp;
+        <input
+          className={styles.textbox}
+          aria-label="Set mutipler value"
+          value={multipler}
+          onChange={e => {
+            setmultipler(e.target.value)
+          }}
+        />
+      <hr></hr>
+      </section>
       <div className={styles.row}>
         <button
           className={styles.button}

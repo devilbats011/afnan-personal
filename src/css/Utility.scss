@@ -1,0 +1,296 @@
+// # Utility.scss is the css modular use for all across the project
+@import "./Library.scss";
+
+.hidden {
+  display: none !important;
+}
+.block{
+  display: block !important;
+}
+
+.txt-mid {
+  text-align: center;
+}
+
+
+.m-0-auto
+{
+  margin: 0 auto;
+}
+
+.test{
+  min-height:10px;
+  position: relative;
+  
+}
+
+// can use list to loop it
+.relative-z5 {
+  position: relative;
+  z-index: $z-5;
+}
+
+.relative-z10 {
+  position: relative;
+  z-index: $z-10;
+}
+
+.extra-light {
+  font-weight: $extra-light !important;
+}
+.light {
+  font-weight: $light;
+}
+.regular {
+  font-weight: $regular !important;
+}
+
+.medium {
+  font-weight: $medium !important;
+}
+.bold {
+  font-weight: $bold !important;
+}
+
+@media (min-width: 0) {
+
+  .col-6-sm{
+    margin: 0 auto;
+    width:49%;
+  }
+
+  .col-12-sm{
+    width:100%;
+  }
+
+  .bigsize-font {
+    /* big About */
+    pointer-events: none;
+    letter-spacing: -.9rem;
+    // word-spacing: -30px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0rem;
+    left: 0rem;
+    font-family: Scope One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 290px;
+    /* identical to box height */
+    opacity: 0.03;
+    color: #111;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+
+  .seagull {
+    @mixin base {
+      width: 70px;
+      height: 60px;
+      top: 0px;
+    }
+    @include base;
+
+    // width: 70px;
+    // height: 60px;
+    // top: 0px;
+
+    &--home {
+      @include base;
+      position: absolute;
+      top:1rem;
+      right: 35%;
+      animation-name: fly;
+      animation-duration: 8s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+
+    &--work {
+      position: relative;
+      @include base;
+    }
+
+    @keyframes fly{
+        0%   {transform: translate(0px,0px);}
+        50%   {transform: translate(0px,16px);}
+        100%   {transform: translate(0px,0px);}
+    }
+
+  }
+
+  .b-check {
+    border: 0.5px dashed #000;
+  }
+
+  .b-check--white {
+    border: 1px dashed #fff;
+  }
+  @mixin voided {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-weight: $extra-light;
+  }
+  @mixin margin-padding-0 {
+    margin: 0;
+    padding: 0;
+  }
+  .void {
+    @include voided;
+  }
+
+  .mp-0 {
+    @include margin-padding-0;
+  }
+
+  .pm-0 {
+    @include margin-padding-0;
+  }
+
+  .txt-mid {
+    text-align: center;
+  }
+
+  .w-space {
+    width: 10px;
+    // /* height: 1px; */
+    background: transparent;
+    display: inline-block;
+  }
+
+  .lh-2rem {
+    line-height: 2;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @include voided;
+  }
+
+  .h1 {
+    font-size: $h3;
+
+    &--frontend {
+      font-size: $b1;
+      font-weight: $regular;
+    }
+  }
+  .h2 {
+    font-size: $b2;
+    &--web {
+      font-size: $b2;
+      font-weight: $light;
+    }
+  }
+  .h3 {
+    font-size: $b2;
+    &--ui {
+      font-size: $b2;
+      font-weight: $light;
+    }
+  }
+
+  .h4 {
+    font-size: $b1;
+
+    &--name {
+      font-size: $b1;
+      // margin-bottom: 1rem;
+      font-weight: $light;
+      letter-spacing: 0.07rem;
+    }
+  }
+  .b1 {
+    font-size: $b1;
+
+    &--bold {
+      font-size: $b1;
+      font-weight: $regular;
+    }
+
+  }
+  .b2 {
+    font-size: $b2;
+    &--bold {
+      font-size: $b2;
+      font-weight: $regular;
+    }
+    &-sm {
+       font-size: $b2;
+     }
+  }
+
+  .hr {
+    /* Line 1 */
+
+    // position: absolute;
+    // width: 429.35px;
+    height: 3px;
+    left: 500px;
+    top: 663.66px;
+
+    transform: rotate(-0.36deg);
+  }
+}
+
+@media (min-width: 960px) {
+  .col-6-md{
+    margin: 0 auto;
+    width:49%;
+  }
+
+  .col-12-md{
+    width:100%;
+  }
+
+
+  .h1 {
+    font-size: $h1;
+
+    &--frontend {
+      font-size: $h1;
+      font-weight: $regular;
+    }
+  }
+  .h2 {
+    font-size: $h2;
+    &--web {
+      font-size: $h2;
+      font-weight: $light;
+    }
+  }
+  .h3 {
+    font-size: $h3;
+    &--ui {
+      font-size: $h3;
+      font-weight: $light;
+    }
+  }
+  .h4 {
+    font-size: $h4;
+
+    &--name {
+      font-size: $h4;
+      margin-bottom: 1rem;
+      font-weight: $light;
+      letter-spacing: 0.07rem;
+    }
+  }
+  .b1-md {
+    font-size: $b1;
+  }
+  .b2-md {
+    font-size: $b2;
+  }
+}
