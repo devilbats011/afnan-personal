@@ -47,8 +47,8 @@
     }
   }
 
-  .sidebar {
-    opacity: $opacity;
+.sidebar {
+    opacity: 0; //$opacity;
     border-radius: 2px;
     position: fixed;
     top:-4px;
@@ -56,9 +56,7 @@
     // left: 3px;
     font-size: $b1;
     z-index: $z-25;
-   
-    // border: 1px solid #0098be;
-
+    border: 1px solid #0098be;
     color: #ffffff;
     letter-spacing: 3px;
     margin: $mSide 0rem;
@@ -67,6 +65,7 @@
 
     &--show {
       left:0px;
+      opacity: 1;
     }
 
     &__item {
@@ -76,7 +75,8 @@
       text-align: center;
       display: block;
       border-bottom: 1px solid #ffffff ;
-      background-color: #0098be;//#2A898D;
+      background-color: #0098be;
+      transition-timing-function: ease;
       // transition-duration: .8s;
       cursor: pointer;
 
@@ -84,38 +84,58 @@
         left:0px;
       }
 
+      &:nth-child(1){
+          transition-duration: .2s;
+      }
+      &:nth-child(2){
+        transition-duration: .4s;
+      }
+      &:nth-child(3){
+        transition-duration: .6s;
+      }
+      &:nth-child(4){
+        transition-duration: .8s;
+      }
+      &:nth-child(5){
+        transition-duration: 1s;
+      }
       
+      $ends : 6;
+      $delay: .3s;
+      @for $i from 1 to $ends {
+        &__item:nth-child(#{$i}) {
+          $delay: $delay + .1s;
+          transition-duration: $delay;
+          // transition-delay: $delay;
+          
+
+          
+          }
+        }
+
     }
+    
+
+
+
     // &__item:last-child{
     //   border-bottom: 0px solid #ddd;
     //   // transition-duration: 2s;
     //   // background-color: #000000;//#2A898D;
     // }
 
-    $ends : 5;
-    $delay: .3s;
- @for $i from 1 to $ends {
-      &__item:nth-child(#{$i}) {
-        $delay: $delay + .1s;
-        transition-duration: $delay;
-        // transition-delay: $delay;
-        
-        transition-timing-function: linear;
-
-      }
-  }
-    // &__item:first-child
-    // &__item:nth-child(3)
-    // {
-    // }
-  }
+      // &__item:first-child
+      // &__item:nth-child(3)
+      // {
+      // }
+}
 
   .header {
     padding: $global-p;
     margin: 1rem;
   }
 
-  .navbar {
+.navbar {
     position: relative;
     z-index: $z-5;
     // border: 1px solid #1a1a1a;
