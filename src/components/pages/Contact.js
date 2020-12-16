@@ -29,12 +29,15 @@ import Hr from "components/small-components/Hr";
         }
       }
       else if(!isEmail){
-        setMessage('Invalid Email, Please try again.')
+        setMessage('Invalid Email, Please try again. --firebase disabled')
         setLoading(false)
       }
     }
     
     async function savingEmail(dataEmail) {
+      if(firebase === false)
+        return false
+
       if(dataEmail === undefined || dataEmail === null || dataEmail === ''){
         setMessage('undefined/null/empty email.')
         setLoading(false)
