@@ -35,7 +35,7 @@ function App({ firebase }) {
         <Contact firebase={firebase} />
       </Main>
       <div className="void to-top-btn" onClick={scrollToTop} title="To top page" >
-        <i class="fa fa-angle-double-up"></i>
+        <i className="fa fa-angle-double-up"></i>
       </div>
     </div>
 

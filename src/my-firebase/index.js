@@ -1,4 +1,5 @@
 import firebase from "firebase/app";
+import "firebase/firestore";
 
 var config = {
   apiKey: "AIzaSyAwFlD0OffPy7Ndb4Knbkj_VEwXEU0fk6A",
@@ -9,6 +10,7 @@ var config = {
   appId: "1:665558613636:web:77b240e30cee0e1ffeccd1",
   measurementId: "G-6NCPRT8Q1H",
 };
+
 firebase.initializeApp(config);
 
 
