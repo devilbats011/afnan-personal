@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Header1, BigWordBg } from ".";
+import { Grid, Header1, BigWordBg,WhiteSpace } from ".";
 import BrownBear from "./../small-components/BrownBear";
 import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -17,16 +17,16 @@ function About() {
       id="about"
     >
       <Grid item xs={12} md={7} className="b-check-off relative">
-        <article className=" about__left-md about__left x-b-check">
-          <p style={{ marginTop: isMdBelow ? "1%" : "25%", padding: "0 10%" }} >
-            Reprehenderit laborum nulla vIrure esse do irure id incididunt Lorem
-            culpa reprehenderit veniam reprehenderit exercitation aliqua. Irure
-            ad laboris reprehenderit ad sit laboris incididunt in minim. Laboris
-            ea aute in occaecat commodo occaecat voluptate reprehenderit laborum
-            est veniam cillum ullamco. Sint eiusmod veniam anim enim pariatur.
-            Officia duis esse eu cupidatat excepteur sint quis. Labore quis
-            occaecat sint mollit veniam mollit ea cupidatat aute cupidatat
-            esse.eniam
+        <article className=" about__left-md about__left b-check-x">
+          <p style={{ marginTop: isMdBelow ? "1%" : "12%", padding: isMdBelow ? "0 10% 0 10%" : "0 1% 0 20%",lineHeight:"1.5" }} >
+              <WhiteSpace spacing={'16px'} /> Hi, my full name is Wan Afnan Hariz  <span  role="img" aria-label="smile-face" > 😄 </span>, can call me <b> Afnan</b>. <br/>
+              I love to indulge myself with <i>  frontend stuff(mostly javascript), web desgining and development. </i> <br/><br/>
+              I live in <b> Kuala Lumpur, Malaysia </b>. i took my <b>Degree in computer science</b> in university called <i> Uitm Melaka </i> before.
+              After graduated, I have been working as a web developer <b> almost 2 years </b> , with my current knowledge and expertise
+              I would love to expand myself and my career growth to the next level play. <br/>
+              I would also love to get around working as <b>a freelance frontend developer/web developer.</b>  <br/><br/>
+              -- Thank you for reading, <b>Cheers</b>! <span  role="img" aria-label="Cheers!" > 🥂 </span>
+
           </p>
         </article>
       </Grid>

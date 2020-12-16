@@ -2,9 +2,15 @@ import React, { useState, useRef } from "react";
 
 function ContactEmailButton({ firebase }) {
   const inputEmailRef = useRef(null)
-  const [message, setMessage] = useState("no response yet..")
+  const [message, setMessage] = useState("")
   const [emailRespond,setEmailRespond] = useState("NO-RES-YET")
   const [isDisable,setIsDisable] = useState(false)
+
+  function todayDate()
+  {
+    let today = new Date();
+    return today
+  }
 
   async function clickHandler(e) {
     setIsDisable(true)
@@ -14,28 +20,36 @@ function ContactEmailButton({ firebase }) {
       return null;
     }
     const emailData = inputEmailRef.current.value
+    const validateEmailData = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/g.test(emailData);
     if(emailData === '' || emailData === null){
-        setMessage("Field Cannot be empty.")
-        setIsDisable(false)
-        return null
+      setMessage("Field cannot be empty..")
+      setIsDisable(false)
+      return null
     }
+    if(!validateEmailData){
+      setMessage("Invalid email..")
+      setIsDisable(false)
+      return null
+    } 
     const result = await firebase
       .firestore()
       .collection("theEmail")
       .add({
         email: emailData,
+        time: todayDate(),
       })
       .then(function (docRef) {
-        setIsDisable(false)
-        setEmailRespond("EMAIL-SAVED")
         console.log("Document written with ID: ", docRef.id ,emailData);
-        return "Document written with ID: " + docRef.id + `, Email saved : ${emailData} `;
-    })
-    .catch(function (error) {
+        setEmailRespond("EMAIL-SAVED")
         setIsDisable(false)
-        setEmailRespond("EMAIL-UNSAVED")
+        setMessage("")
+        return "Document written with ID: " + docRef.id + `, Email saved : ${emailData} `;
+      })
+      .catch(function (error) {
         console.error("Error adding document: ", error);
-        return "Error adding document";
+        setEmailRespond("EMAIL-UNSAVED")
+        setIsDisable(false)
+          return "Error adding document";
       });
     setMessage(result);
   }
@@ -58,7 +72,11 @@ function ContactEmailButton({ firebase }) {
           email
         </button>
       </section>
-        <p>message: {message} </p>
+      <section className={emailRespond === "EMAIL-SAVED" ? 'contact__thx_box block' : 'contact__thx_box hidden'} >
+                <span  role="img" aria-label="ThankYou" > Thank you for the mail! 😊 </span> 
+      </section>
+
+        <p className="b2" > {message} </p>
     </div>
   );
 }

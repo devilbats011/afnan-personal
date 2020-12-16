@@ -26,7 +26,7 @@ import Hr from "components/small-components/Hr";
         <br />
         <ContactEmailButton firebase={firebase} />
       </article>
-      <br/><br/>
+      <br/>
       
     </Grid>
   );

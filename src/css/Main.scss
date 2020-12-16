@@ -135,10 +135,9 @@
     &__thx_box {
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      display: block;
-      position: absolute;
-      min-width: fit-content;
+      transform: translate(-50%, -30%);
+      position: relative;
+      width: fit-content;
       height: 45px;
       padding: 19px 1rem 0px 1rem;
       text-align: center;
