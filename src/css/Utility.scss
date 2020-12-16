@@ -97,8 +97,8 @@
     &--home {
       @include base;
       position: absolute;
-      top:1rem;
-      right: 35%;
+      top: -0.9rem;
+      right: 30%;
       animation-name: fly;
       animation-duration: 8s;
       animation-timing-function: ease-in-out;

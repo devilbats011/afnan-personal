@@ -110,13 +110,13 @@
       border: 2px solid;
       border-image-slice: 2;
       border-image-source: linear-gradient(
-        170deg,
+        170.09deg,
         rgba(255, 255, 255, 0.29) 26.2%,
         #80cbcf 45.12%,
         #2983ed 74.63%,
         #2983ed 34.78%
       );
-      border-right: 0px solid #2983ed;
+
     }
 
     .border-gradient-green {
@@ -147,7 +147,6 @@
     }
 
     &__emailinput {
-      @extend .border-gradient-blue;
       display: inline-block;
       position: relative;
       width: 300px;
@@ -155,6 +154,8 @@
       left: 0px;
       padding-left: 1rem;
       font-size: $b2;
+      @extend .border-gradient-blue;
+      border-right: 0px solid #2983ed;
       &:focus {
         outline-color: transparent;
         box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.1);

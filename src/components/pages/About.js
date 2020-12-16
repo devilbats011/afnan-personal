@@ -16,7 +16,11 @@ function About() {
       direction={isMdBelow ? "column-reverse" : "row"}
       id="about"
     >
-      <Grid item xs={12} md={7} className="b-check-off relative">
+      <Grid item
+       md={12}
+       lg={7}
+       className="b-check-off relative"
+      >
         <article className=" about__left-md about__left b-check-x">
           <p style={{ marginTop: isMdBelow ? "1%" : "12%", padding: isMdBelow ? "0 10% 0 10%" : "0 1% 0 20%",lineHeight:"1.5" }} >
               <WhiteSpace spacing={'16px'} /> Hi, my full name is Wan Afnan Hariz  <span  role="img" aria-label="smile-face" > 😄 </span>, can call me <b> Afnan</b>. <br/>
@@ -32,8 +36,8 @@ function About() {
       </Grid>
       <Grid
         item
-        xs={12}
-        md={5}
+        md={12}
+        lg={5}
         className="b-check-off relative"
       >
         <BigWordBg style={{ left: "-28%",top:"-10%" }} className="b-check">
