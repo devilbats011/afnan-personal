@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Header1 } from ".";
 import ContactInfo from "components/small-components/ContactInfo";
 import ContactShip from "components/small-components/ContactShip";
+import ContactEmailButton from "components/group-components/ContactEmailButton";
 import Hr from "components/small-components/Hr";
 
   function Contact({firebase}) {
@@ -23,8 +24,10 @@ import Hr from "components/small-components/Hr";
         <ContactInfo icon="whatsapp" message="+60136448923" />
         <ContactInfo icon="messenger" message="+60136448923" />
         <br />
+        <ContactEmailButton firebase={firebase} />
       </article>
       <br/><br/>
+      
     </Grid>
   );
 }
