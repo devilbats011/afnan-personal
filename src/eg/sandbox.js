@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 export function Person(fn, ln) {
   //this refer to person
   this.first_name = fn;
