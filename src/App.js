@@ -12,6 +12,7 @@ import Sidebar from "components/pages/Sidebar";
 import Header from "components/pages/Header";
 import Main from "components/pages/Main";
 
+
 import { animateScroll as scroll } from 'react-scroll';
 
 function App({ firebase=false }) {

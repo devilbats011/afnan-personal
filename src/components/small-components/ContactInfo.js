@@ -37,7 +37,8 @@ function ContactInfo({ icon, message = "no__message" }) {
     }
   };
 
-  const [iconx, setIconx] = useState(iconHandler(icon));
+  const [iconx] = useState(iconHandler(icon));
+
 
   return (
     <div className="contactinfo">
