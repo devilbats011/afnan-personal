@@ -4,11 +4,9 @@ import "./index.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-const fire = false;
-
 ReactDOM.render(
   <React.StrictMode>
-      <App firebase={fire} />
+      <App firebase={false} />
   </React.StrictMode>,
   document.getElementById("root")
 );

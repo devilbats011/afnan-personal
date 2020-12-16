@@ -4,7 +4,6 @@ import ContactInfo from "components/small-components/ContactInfo";
 import ContactShip from "components/small-components/ContactShip";
 import Hr from "components/small-components/Hr";
 
-
   function Contact({firebase}) {
 
     const formRef = useRef();
@@ -29,7 +28,8 @@ import Hr from "components/small-components/Hr";
         }
       }
       else if(!isEmail){
-        setMessage('Invalid Email, Please try again. --firebase disabled')
+        /*setMessage('Invalid Email, Please try again. --firebase disabled')*/
+        setMessage('--firebase disabled--')
         setLoading(false)
       }
     }
@@ -44,6 +44,7 @@ import Hr from "components/small-components/Hr";
         return false
       }
 
+      /*
       return await firebase
         .firestore()
         .collection("theEmail")
@@ -58,6 +59,7 @@ import Hr from "components/small-components/Hr";
           console.error("Error adding document: ", error);
           return false
         });
+      */
     }
 
   return (
@@ -81,7 +83,7 @@ import Hr from "components/small-components/Hr";
           
           <div className="contact__ref_point">
             <section className={!isEmailSave ? 'contact__thx_box hidden' : 'contact__thx_box block'} >
-                <span> Thank you for the mail! 😊 </span> 
+                <span  role="img" aria-label="ThankYou" > Thank you for the mail! 😊 </span> 
             </section>
 
               <section className={isEmailSave ? 'relative hidden' : 'relative' }>
