@@ -37,7 +37,6 @@ function ContactInfo({ icon, message = "no__message" }) {
     }
   };
 
-  // eslint-disable-next-line no-unused-vars
   const [iconx, setIconx] = useState(iconHandler(icon));
 
   return (

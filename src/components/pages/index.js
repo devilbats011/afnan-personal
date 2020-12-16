@@ -13,7 +13,6 @@ function WhiteSpace({ spacing = "1rem", hide = [], ...p }) {
   );
 }
 
-//middle line check
 function MlCheck() {
   return (
     <div

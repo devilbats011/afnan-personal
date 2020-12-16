@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState,useRef } from "react";
 import { Grid, Header1 } from ".";
 import ContactInfo from "components/small-components/ContactInfo";
@@ -19,7 +18,6 @@ import Hr from "components/small-components/Hr";
       e.preventDefault();
       const email = formRef.current["email"].value;
       const isEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/g.test(email);
-      // console.log("isEmail", isEmail, "email", email);
       if (isEmail){
         const result =  savingEmail(email) 
         setIsEmailSave(result)
@@ -37,7 +35,6 @@ import Hr from "components/small-components/Hr";
     }
     
     async function savingEmail(dataEmail) {
-      // console.log(dataEmail)
       if(dataEmail === undefined || dataEmail === null || dataEmail === ''){
         setMessage('undefined/null/empty email.')
         setLoading(false)
@@ -63,9 +60,6 @@ import Hr from "components/small-components/Hr";
   return (
     <Grid item xs={12} className="contact relative" id="contact" >
       <article className="contact__content">
-        {/* <BigWordBg style={{ top: "-20%",left:"22%" } }  className="" >
-          contact
-        </BigWordBg> */}
         <Header1 className="" style={{ marginBottom: "0rem" }}>
           Contact
         </Header1>
@@ -74,7 +68,6 @@ import Hr from "components/small-components/Hr";
         <p className="void h4 ">
           <i>Keep In Touch! I love to hear your </i> <span className="regular" > ideas </span>!
         </p>
-        {/* <br /> */}
         <Hr />
         <ContactInfo icon="gmail" message="wanafnanharizwz@gmail.com" />
         <ContactInfo icon="resume" message="https://wfh-resume.netlify.app" />

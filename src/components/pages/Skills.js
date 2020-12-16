@@ -7,10 +7,7 @@ function Skills() {
         postion: `absolute`,
         left:`48%`,
         top:`-5%`,
-        // right:0,
-        // fontFamily: "",
-        // fontWeight: "",
-        // fontSize: "",
+
       };
 
   return (

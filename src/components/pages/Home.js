@@ -1,11 +1,7 @@
 import React from "react";
-import main from "@material-ui/core/Grid";
-// import Hidden from "@material-ui/core/Hidden";
 import Adventure from "./../group-components/Adventure";
-//main__home_avatar,main__home_intro_text seagull-home
 import "./../../css/Main.scss";
 import Avatar from "./../../resources/avatar.svg";
-// b-check void h1,h2,h3,h4
 import "./../../css/Utility.scss";
 import Seagull from "./../small-components/Seagull";
 import { WhiteSpace } from "components/pages";

@@ -39,7 +39,6 @@ function About() {
         <BigWordBg style={{ left: "-28%",top:"-10%" }} className="b-check">
           about
         </BigWordBg>
-        {/* <article className="about__right"> */}
         <Header1
           className="b-check-x relative "
           style={{ margin: "0px", padding: "0px", right: "40px", top: "20px" }}
@@ -59,7 +58,6 @@ function About() {
           <i> me </i>
         </Header1>
         <BrownBear />
-        {/* </article> */}
       </Grid>
     </Grid>
   );

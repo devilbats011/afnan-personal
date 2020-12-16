@@ -6,8 +6,6 @@ function ContactShip() {
     <div
       style={{
         display: "block",
-        // justifyContent:"center",
-        // flexDirection: "column",
       }}
       className="b-check-off"
     >
@@ -22,7 +20,6 @@ function ContactShip() {
           height: "100px",
           position: "relative",
           top: "2.6rem",
-          //   zIndex: "10",
         }}
       />
       <img

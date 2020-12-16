@@ -1,9 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-// import * as sandbox from "./eg/sandbox";
-// import "tailwindcss" //? can use like normal...?cant yet nvm
-import React from // useEffect // useState, // ,{
-  // import {MlCheck } from "components/pages";
-// }
+import React from 
 "react";
 import { useEffect } from "react";
 import "./css/App.scss";
@@ -19,14 +14,12 @@ import Main from "components//pages/Main";
 import { animateScroll as scroll } from 'react-scroll';
 
 function App({ firebase }) {
-  //useState mount data
-  //useState loaded first before useEffect and jsx
+
   function scrollToTop() {
     scroll.scrollToTop();
   }
   useEffect(() => {
-    //init data
-    //useEffect Execute after jsx loaded
+
   }, []);
 
   return (
@@ -44,7 +37,7 @@ function App({ firebase }) {
         <i class="fa fa-angle-double-up"></i>
       </div>
     </div>
-    // </div>
+
   );
 }
 export default App;

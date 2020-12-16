@@ -9,7 +9,6 @@ function Adventure() {
         <Ship src={WoodShip} alt="marine01" className="sea__ship-1 " top={"5rem"}  />
         <Ship src={WoodShip} alt="marine02" className="sea__ship-2 " top={"8rem"}  />
         <Ship src={PirateShip} alt="pirate" className="sea__ship-3 " top={"5.6rem"}  />
-        {/* //"sea__ship" */} 
 
       </div>
     </>

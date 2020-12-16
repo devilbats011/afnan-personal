@@ -7,9 +7,7 @@ import Blankseagull from "resources/blankseagull.svg";
 function Works() {
   return (
     <Grid item xs={12} className="b-check-off works relative" id="works" >
-      {/* <p style={{ marginTop: `27%` }}>Reprehenderit laborum nulla veniam</p> */}
-      {/*
-       */}
+
       <article className="works__content">
         <Header1>
           Works
