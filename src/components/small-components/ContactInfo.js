@@ -4,7 +4,7 @@ import resume from "resources/contact/resume.svg";
 import whatsapp from "resources/contact/whatsapp.svg";
 import messenger from "resources/contact/messenger.svg";
 
-function ContactInfo({ icon, message = "no__message" }) {
+function ContactInfo({ icon, message = "no__message", href }) {
   const iconHandler = (icon) => {
     const iconData = {
       src: "No icon src",
@@ -54,7 +54,7 @@ function ContactInfo({ icon, message = "no__message" }) {
            right: "12px",
         }}
       />
-      <p className="void b1 regular" >{message}</p>
+     { !href ? (<p className="void b1 regular" >{message}</p>): (<a className="void b1 regular" href={href} target="_blank" rel="noopener noreferrer" > {message} </a>) }
     </div>
   );
 }
