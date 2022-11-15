@@ -20,8 +20,8 @@ import Hr from "components/small-components/Hr";
         </p>
         <Hr />
         <ContactInfo icon="gmail" message="wanafnanharizwz@gmail.com" />
+        <ContactInfo icon="whatsapp" message="+60-136-448-923" href={'#'} />
         <ContactInfo icon="resume" message="https://wfh-resume.netlify.app" href="https://wfh-resume.netlify.app" />
-        <ContactInfo icon="whatsapp" message="+60136448923" />
         {/* <ContactInfo icon="messenger" message="+60136448923" /> */}
         <br />
         <ContactEmailButton firebase={firebase} />

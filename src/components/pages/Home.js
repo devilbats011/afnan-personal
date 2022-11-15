@@ -20,14 +20,18 @@ function Home() {
           <article className="main__home_intro_text b-check-x">
             <Seagull className="seagull--home" />
             <h1 className=" h4--name lh-2rem ">Oh Hi, I’am Afnan :) work as</h1>
-            <h1 className=" h1--frontend"> A Frontend Developer /</h1>
+            <h1 className=" h1--frontend">
+               {/* A Software Engineer / */}
+               A Software Developer /
+            </h1>
             <h1 className=" h2--web">
-              <WhiteSpace spacing={"3rem"} hide={["xs", "sm"]} /> A Web
-              Developer /
+              <WhiteSpace spacing={"3rem"} hide={["xs", "sm"]} />
+               A Web Developer /
             </h1>
             <h1 className=" h3--ui">
-              <WhiteSpace spacing={"6rem"} hide={["xs", "sm"]} />A little bit Ui
-              Designer
+              <WhiteSpace spacing={"7rem"} hide={["xs", "sm"]} />
+              {/* A little bit Ui Designer */}
+              A Mobile Developer
             </h1>
           </article>
         </section>

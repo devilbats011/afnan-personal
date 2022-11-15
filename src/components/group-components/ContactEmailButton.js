@@ -66,6 +66,7 @@ function ContactEmailButton({ firebase }) {
         />
         <button
           className="contact__btn"
+          style={{color:"white"}}
           onClick={(e) => clickHandler(e)}
           disabled={isDisable}
         >

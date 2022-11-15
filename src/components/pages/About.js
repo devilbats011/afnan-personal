@@ -23,13 +23,13 @@ function About() {
       >
         <article className=" about__left-md about__left b-check-x">
           <p style={{ marginTop: isMdBelow ? "1%" : "12%", padding: isMdBelow ? "0 10% 0 10%" : "0 1% 0 20%",lineHeight:"1.5" }} >
-              <WhiteSpace spacing={'16px'} /> Hi, my full name is Wan Afnan Hariz  <span  role="img" aria-label="smile-face" > 😄 </span>, can call me <b> Afnan</b>. <br/>
-              I love to indulge myself with <i>  frontend stuff(mostly javascript), web desgining and development. </i> <br/><br/>
+              <WhiteSpace spacing={'16px'} /> <b><i>Hello~</i></b> My name is Wan Afnan Hariz, can call me <b> Afnan</b>   <span  role="img" aria-label="smile-face" > 😄 </span> <br/>
+              I love to indulge myself with <i className="bold">  tech stuff </i>,
               I live in <b> Kuala Lumpur, Malaysia </b>. i took my <b>Degree in computer science</b> in university called <i> Uitm Melaka </i> before.
-              After graduated, I have been working as a web developer <b> almost 2 years </b> , with my current knowledge and expertise
-              I would love to expand myself and my career growth to the next level play. <br/>
-              I would also love to get around working as <b>a freelance frontend developer/web developer.</b>  <br/><br/>
-              -- Thank you for reading, <b>Cheers</b>! <span  role="img" aria-label="Cheers!" > 🥂 </span>
+              After graduated, I have worked with some IT Companies and have picked up a bunch of experiences in <b>2 years+</b> as a software developer/engineer, I always welcome good challenges and good business. 
+              {/* I would love to expand myself and my career growth to the next level play. <br/> */} Work remotely as <b>a freelance  software developer.</b>  <br/><br/>
+              <i>Thanks for reading little about me,<br></br> <b> - Cheers</b>!</i> 
+              <span  role="img" aria-label="Cheers!" > 🥂 </span>
 
           </p>
         </article>
@@ -40,7 +40,7 @@ function About() {
         lg={5}
         className="b-check-off relative"
       >
-        <BigWordBg style={{ left: "-28%",top:"-10%" }} className="b-check">
+        <BigWordBg customSkills style={{ position:"absolute",left: isMdBelow ? "16%" : "-20%",top:"-10%" }} className="b-check" >
           about
         </BigWordBg>
         <Header1

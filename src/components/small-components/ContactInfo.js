@@ -5,6 +5,10 @@ import whatsapp from "resources/contact/whatsapp.svg";
 import messenger from "resources/contact/messenger.svg";
 
 function ContactInfo({ icon, message = "no__message", href }) {
+
+  // const [target,setTarget] = useState("_blank");
+  let target = "_blank";
+
   const iconHandler = (icon) => {
     const iconData = {
       src: "No icon src",
@@ -25,6 +29,7 @@ function ContactInfo({ icon, message = "no__message", href }) {
       }
       case "whatsapp": {
         iconData.src = whatsapp;
+        target = "";
         return iconData;
       }
       case "messenger": {
@@ -37,7 +42,10 @@ function ContactInfo({ icon, message = "no__message", href }) {
     }
   };
 
+
   const [iconx] = useState(iconHandler(icon));
+
+
 
 
   return (
@@ -54,7 +62,7 @@ function ContactInfo({ icon, message = "no__message", href }) {
            right: "12px",
         }}
       />
-     { !href ? (<p className="void b1 regular" >{message}</p>): (<a className="void b1 regular" href={href} target="_blank" rel="noopener noreferrer" > {message} </a>) }
+     { !href ? (<p className="void b1 regular" >{message}</p>): (<a className="void b1 regular" href={href} target={target} rel="noopener noreferrer" > {message} </a>) }
     </div>
   );
 }

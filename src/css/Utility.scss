@@ -12,6 +12,18 @@
 }
 
 
+//padding
+.p-y-1rem {
+  padding-top: 1rem;
+  padding-bottom: 1rem;  
+}
+
+.p-y-14px {
+  padding-top: 1rem;
+  padding-bottom: 1rem;  
+}
+
+// MARGIN
 .m-0-auto
 {
   margin: 0 auto;
@@ -277,5 +289,8 @@
   }
   .b2-md {
     font-size: $b2;
+  }
+  .size-14px {
+    font-size: 14px;
   }
 }
