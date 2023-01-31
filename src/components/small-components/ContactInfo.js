@@ -3,6 +3,7 @@ import gmail from "resources/contact/gmail.svg";
 import resume from "resources/contact/resume.svg";
 import whatsapp from "resources/contact/whatsapp.svg";
 import messenger from "resources/contact/messenger.svg";
+import telegram from "resources/contact/telegram.png";
 
 function ContactInfo({ icon, message = "no__message", href }) {
 
@@ -29,11 +30,14 @@ function ContactInfo({ icon, message = "no__message", href }) {
       }
       case "whatsapp": {
         iconData.src = whatsapp;
-        target = "";
         return iconData;
       }
       case "messenger": {
         iconData.src = messenger;
+        return iconData;
+      }
+      case "telegram": {
+        iconData.src = telegram;
         return iconData;
       }
 
